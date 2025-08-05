@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Reasons You Fascinate Me</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom right, #d8eaff, #ffd6e0, #ffeaea);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: #e63946;
+    }
+    .day-box {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin: 1rem;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+    }
+    .footer {
+      margin-top: auto;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .hidden { display: none; }
+    input[type="password"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-left: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Reasons You Fascinate Me and Amaze Me Every Day 💙</h1>
+  <div id="auth-container">
+    <p>Please enter the password to unlock your messages:</p>
+    <input type="password" id="password" placeholder="Enter password"/>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error-msg" style="color:red;"></p>
+  </div>
+
+  <div id="message-container" class="hidden"></div>
+  <div class="footer hidden" id="footer">With all my love, Gunank (Your Cutsyyy) 🧿</div>
+
+  <script>
+    const correctPassword = "Cutsyyy123";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const errorMsg = document.getElementById("error-msg");
+
+      if (input === correctPassword) {
+        document.getElementById("auth-container").style.display = "none";
+        document.getElementById("message-container").classList.remove("hidden");
+        document.getElementById("footer").classList.remove("hidden");
+        showMessages();
+      } else {
+        errorMsg.textContent = "Incorrect password. Try again!";
+      }
+    }
+
+    function showMessages() {
+      const messages = [
+        `Your smile lights up even my toughest days🧿😊.Just seeing you there and to have you with me whom I know is there never to judge me it makes my day even lively and peaceful 🧿😊`,
+        `The way you laugh when I say something silly.😊🫡 it might be the worst I have said or just the most basic joke but you smile and just the cutest laugh makes me feel I won the whole world🧿😊`,
+        `Your honesty even when it scares you to be vulnerable or if I am scared to be vulnerable 🥺 we both make that space and area of comfort for each other where there is communication and no gap just a place to vent and learn and be better for each other🥺🧿`,
+        `How you always want to see both sides of me rather I may be the serious one or the goofy one  the caring side the funny side you accept each personality of me and make me feel comfortable and joyyy😊🧿 how was I so lucky🥺🧿`,
+        `The way you call me “gentleman,” and mean it😊🧿 it is one of my greatest achievements with you😊🧿 I know how important manners and gestures are for you and to make you feel I achieved some level of it makes me soo happy 😊🧿`,
+        `How you scold me gently when I do something wrong you get angry which is completely good you should but that anger is always projected to teach me to be better😊🧿 our progression to back to being better and stronger is always fruitful and peaceful 🥺🧿`,
+        `The sparkle in your eyes when you talk about something you love it just makes my heart so happy 😊🧿 you talking about your favourite singers ,favourite shows , how you love k pop especially BTS😊🧿 your craving for chips and ice cream 😊🧿 my heart melts listening to it🥺🧿 and I just wanna hear you talk about your favourite things things you find amusing every day🥺🧿`,
+        `Your soft voice it calms me instantly🥺🧿 you have the power to make my brain go silent in a second and I love you having that power🥺🧿I could be thinking a million things and you can catch it instantly just from my face and just make me go silent and calm🥺🧿 it feels so calming and you make me realise I can solve it🥺🧿`,
+        `The way you wish me Good Morning with My Cutsyyy words 😊🧿 there is nothing better possible than that to start your morning it is a warmth which can never be replicated by anybody 🥺🧿 the way you wish me in each thing it makes that thing a million times better 😊🧿I wanna wish you and be wished Good Morning by you everyday of my life🥺🧿`,
+        `How we discuss the songs for your stories it is the most fun experience and it connects us so welll🥺🧿 it shows how we listen and hear each others suggestions and come to a centre point to solve it😊🧿 how you listen to me and see what suits us🥺🧿it feels such a great time 🥺🧿 and I am so motivated that I should provide the best song 😊🧿`,
+        `Your confidence in moments you don’t feel strong that is so inspiring 😊🧿 ...`,
+        `The respect you show everyone around you that is such a adoring ...`,
+        `Your goofy side or you when you wanna babied it is the mostttt Cutestttt  😊🧿 ...`,
+        `How you light up any room you walk into especially for me 😊🧿 ...`,
+        `The way you fought for that Chair with Mehar for me 😊🧿 ...`,
+        `Your attentiveness when I explain something 🥺🧿 ...`,
+        `The way you think of me 🥺🧿 ...`,
+        `The nicknames you give me they mean more than you know 😊🧿 ...`,
+        `How you share your inner world with me especially your periods🥺🧿 ...`,
+        `Your compassion for others😊🧿 ...`,
+        `The passion you have for your dreams🥺🧿 ...`,
+        `Your creativity 😊🧿 ...`,
+        `Your playful spirit when we chat late at night😊🧿 ...`,
+        `How you include me in your social space🥺🧿 ...`,
+        `Your integrity 😊🧿 ...`
+      ];
+
+      const container = document.getElementById("message-container");
+      const startDate = new Date("2025-08-05T00:00:00");
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+      for (let i = 0; i <= diffDays && i < messages.length; i++) {
+        const box = document.createElement("div");
+        box.classList.add("day-box");
+        box.innerHTML = `<strong>Day ${i + 1}:</strong><br>${messages[i]}`;
+        container.appendChild(box);
+      }
+
+      if (diffDays < 0) {
+        container.innerHTML = `<div class="day-box"><strong>This gift starts on August 5, 2025.</strong></div>`;
+      }
+    }
+  </script>
+</body>
+</html>
